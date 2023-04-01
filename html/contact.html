@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim - SoftITO</title>
+  <meta name="description" content="SoftITO web sitesine bağlı oluşturulan bir ödev projesidir">
+  <meta name="keywords" content="SoftITO, Website, ödev, Proje"> 
+  <meta name="author" content="Doğan MERDEN">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+  <div class="header">
+      <img src="../images/logohorizontal.svg" alt="logo" height="300px">
+  </div>
+
+  <div class="topnav" id="navbar">
+    <a href="../index.html">Anasayfa</a>
+    <a href="https://softito.com.tr/egitimler">Eğitimler</a>
+    <a class="active" href="contact.html">İletişim</a>
+    <a href="../html/aboutus.html">Biz Kimiz</a>
+    <a href="../html/sign.html">Giriş</a>
+    <a href="javascript:void(0);" class="icon" onclick="functionResponsive()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<div class="content">
+  <div class="container">
+    <div class="contact">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Adres</div>
+          <div class="text-one">İDTM A1 No:10</div>
+          <div class="text-two">34149 Bakırköy/İstanbul</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Telefon</div>
+          <div class="text-one">+90 212 519 59 80</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">bilgi@softito.com.tr</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Bize Yazın</div>
+        <p>Paylaşmak istediğiniz birşeyler varsa bu bölümden hızlıca bize ulaşabilirsiniz</p>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Adınız" required>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Email adresi" required>
+          </div>
+          <div class="input-box message-box">
+            <textarea placeholder="Bu alana masajınızı yazabilirsiniz" res required></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Gönder" >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+    <section class="contact-area" id="contact">
+        <div class="container-footer">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="contact-content text-center">
+                        <a id="footerimage" href="#"><img src="../images/softito.png" alt="logo" style="border-radius: 10px ; margin-top: 15px;"></a>
+                        <p style="color: dodgerblue;">softITO bir İstanbul Ticaret Odası markasıdır</p>
+
+                        <div id="digital-clock">
+                          <span id="digital-date"></span>
+                          <span id="digital-time"></span>
+                        </div>
+
+                        <p>İstanbul Ticaret Odası SoftITo Yazılım - Bilişim Akademisi Projesi, günümüz gençlerine geleceğin yetkinliklerini kazandırmak için başlatılan bir seferberliktir</p>
+                        <div class="hr"></div>
+                        <h6>İstanbul Dünya Ticaret Merkezi (İDTM) İstanbul Ticaret Odası SoftITo Yazılım - Bilişim Akademisi</h6>
+                        <h6>A1 Girişi Çarşı Katı No:10 Yeşilköy/Bakırköy 34149 İstanbul TÜRKİYE </h6>
+                        <h6>+90 212 519 59 80<span>|</span>bilgi@softito.com.tr</h6>
+                        <div class="contact-social">
+                            <ul>
+                                <li><a class="hover-target" href="https://www.facebook.com/softitoakademi"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href="https://tr.linkedin.com/company/softitoakademi"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href="https://twitter.com/softitoakademi"><i class="fab fa-twitter"></i></a></li>
+                                <li><a class="hover-target" href="https://www.instagram.com/softitoakademi/"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script>
+  window.onscroll = function() {stickyFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function stickyFunction() {
+
+
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+  function functionResponsive() {
+    var x = document.getElementById("navbar");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  /*Saat tarih*/
+  function displayDateTime() {
+    const now = new Date();
+    
+    const day = now.getDate();
+    const monthIndex = now.getMonth();
+    const year = now.getFullYear();
+    const monthNames = ["OCA", "ŞUB", "MAR", "NİS", "MAY", "HAZ", "TEM", "AĞU", "EYL", "EKİ", "KAS", "ARA"];
+    const monthName = monthNames[monthIndex];
+    
+    const hours = now.getHours().toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+
+    const dateText = `${day} ${monthName} ${year}`;
+    const timeText = `${hours}:${minutes}:${seconds}`;
+
+    const dateElement = document.querySelector("#digital-date");
+    const timeElement = document.querySelector("#digital-time");
+
+    dateElement.textContent = dateText;
+    timeElement.textContent = timeText;
+  }
+
+  setInterval(displayDateTime, 1000);
+</script>
+
+</body>
+</html>
